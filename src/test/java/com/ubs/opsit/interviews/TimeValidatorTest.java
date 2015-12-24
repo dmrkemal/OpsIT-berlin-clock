@@ -57,4 +57,10 @@ public class TimeValidatorTest {
         String aTime="invalid time";
         timeValidatorTest.validateTime(aTime);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testTimeIsInvalid6() throws Exception {
+        String aTime="-11:34:58";
+        timeValidatorTest.validateTime(aTime);
+    }
 }
